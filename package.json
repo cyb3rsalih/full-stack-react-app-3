@@ -1,0 +1,31 @@
+{
+  "name": "full-stack-react-app-3",
+  "version": "1.0.0",
+  "description": "Full stack react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyb3rsalih/full-stack-react-app-3.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "salih",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyb3rsalih/full-stack-react-app-3/issues"
+  },
+  "homepage": "https://github.com/cyb3rsalih/full-stack-react-app-3#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "pg": "^7.8.1"
+  }
+}
