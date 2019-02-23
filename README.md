@@ -1,2 +1,2 @@
-# full-stack-react-app-3
-3rd Try
+# Weather App
+A simple weather app built following along a Youtube tutorial, using React, Express and PostgreSQL
