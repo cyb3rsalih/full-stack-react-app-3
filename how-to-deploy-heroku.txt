@@ -1,0 +1,52 @@
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+Logging in... done
+Logged in as mehmetsalihbindak@gmail.com
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku create hava-durumu-app
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+Creating ⬢ hava-durumu-app... done
+https://hava-durumu-app.herokuapp.com/ | https://git.heroku.com/hava-durumu-app.git
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku addons:create heroku-postgresql
+
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+Creating heroku-postgresql on ⬢ hava-durumu-app... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-aerodynamic-74667 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku addons:create heroku-postgresql:hobby-dev --name=weather-db
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+Creating heroku-postgresql:hobby-dev on ⬢ hava-durumu-app... !
+ ▸    Name is already taken
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku addons:create heroku-postgresql:hobby-dev --name=weather-my--db
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+Creating heroku-postgresql:hobby-dev on ⬢ hava-durumu-app... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created weather-my--db as HEROKU_POSTGRESQL_CHARCOAL_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku addons:attach weather-my--db --app=hava-durumu-app
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+Attaching weather-my--db to ⬢ hava-durumu-app... done
+Setting HEROKU_POSTGRESQL_CYAN config vars and restarting ⬢ hava-durumu-app... done, v7
+mehmet-MacBook-Pro:full-stack-react-app-3 mehmetsalihbindak$ heroku pg:psql --app hava-durumu-app
+ ›   Warning: heroku update available from 7.21.0 to 7.22.0
+--> Connecting to postgresql-aerodynamic-74667
+psql (11.1, server 10.6 (Ubuntu 10.6-1.pgdg16.04+1))
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+hava-durumu-app::DATABASE=> CREATE TABLE cities (
+hava-durumu-app::DATABASE(> id serial NOT NULL,
+hava-durumu-app::DATABASE(> city_name character varying(50) NOT NULL,
+hava-durumu-app::DATABASE(> PRIMARY KEY (id)
+hava-durumu-app::DATABASE(> );
+CREATE TABLE
+hava-durumu-app::DATABASE=> \w
+\w: missing required argument
+hava-durumu-app::DATABASE=> \wq
+Invalid command \wq. Try \? for help.
+hava-durumu-app::DATABASE=> \q
