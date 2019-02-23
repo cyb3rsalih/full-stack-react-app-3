@@ -4,7 +4,7 @@
   "description": "Full stack react app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,11 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
-    "pg": "^7.8.1"
+    "pg": "^7.8.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
   }
 }
